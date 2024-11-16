@@ -1,0 +1,17 @@
+<!-- templates/accounts/activation_email.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Activa tu cuenta</title>
+</head>
+<body>
+    <p>Hola {{ user.username }},</p>
+    <p>Gracias por registrarte en nuestro sitio web. Para activar tu cuenta, por favor haz clic en el siguiente enlace:</p>
+    <a href="http://localhost:8000/accounts/activate/{{ uid }}/{{ token }}/">Activar mi cuenta</a>   <!--se reemplaza por el dominio real -->
+    <p>Si no realizaste este registro, ignora este mensaje.</p>
+</body>
+</html>
+
+
+

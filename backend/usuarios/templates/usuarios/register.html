@@ -1,0 +1,28 @@
+<!-- usuarios/templates/usuarios/register.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+
+<h2>Registro de Usuario</h2>
+
+{% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Muestra el formulario con los campos de manera simple -->
+    <button type="submit">Registrar</button>
+</form>
+
+</body>
+</html>
